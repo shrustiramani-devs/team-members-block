@@ -1,0 +1,230 @@
+/* Team Members Block Styles */
+.tmb-members {
+    display: grid;
+    margin: 2rem 0;
+}
+
+.tmb-members.tmb-layout-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tmb-member {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.tmb-member.tmb-member-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.tmb-member.tmb-member-minimal {
+    background: transparent;
+    border: 2px dashed #e0e0e0;
+    padding: 1.5rem;
+}
+
+.tmb-member.text-align-left {
+    text-align: left;
+}
+
+.tmb-member.text-align-center {
+    text-align: center;
+}
+
+.tmb-member.text-align-right {
+    text-align: right;
+}
+
+.tmb-member-media {
+    margin-bottom: 1.5rem;
+}
+
+.tmb-image-upload {
+    text-align: center;
+}
+
+.tmb-upload-button {
+    width: 100%;
+    padding: 2rem;
+    border: 2px dashed #d1d5db;
+    background: #f9fafb;
+}
+
+.tmb-image-preview {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+}
+
+.tmb-member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f3f4f6;
+    display: block;
+    margin: 0 auto;
+}
+
+.tmb-image-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tmb-member-content {
+    padding: 0 1rem;
+}
+
+.tmb-member-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.tmb-member-title {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+}
+
+.tmb-member-bio {
+    margin: 1rem 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.tmb-bio-textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Social Links */
+.tmb-social-links-editor {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.tmb-social-links-editor h5 {
+    margin: 0 0 1rem 0;
+    color: #374151;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tmb-social-link-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+.tmb-social-link-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tmb-social-link-header .components-select-control {
+    flex: 1;
+}
+
+.tmb-no-social-links {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+}
+
+.tmb-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tmb-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.tmb-social-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Specific social media colors */
+.tmb-social-twitter:hover { background: #1da1f2; }
+.tmb-social-facebook:hover { background: #1877f2; }
+.tmb-social-linkedin:hover { background: #0a66c2; }
+.tmb-social-instagram:hover { background: #e4405f; }
+.tmb-social-youtube:hover { background: #ff0000; }
+.tmb-social-github:hover { background: #333; }
+.tmb-social-website:hover { background: #10b981; }
+.tmb-social-email:hover { background: #6b7280; }
+
+/* Editor enhancements */
+.tmb-member .components-base-control {
+    margin-bottom: 1rem;
+}
+
+.tmb-member .components-base-control__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .tmb-members {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .tmb-members {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .tmb-member.tmb-member-card {
+        padding: 1.5rem;
+    }
+}
